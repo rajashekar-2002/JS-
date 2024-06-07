@@ -1,0 +1,40 @@
+-------------working fine------------------------
+
+
+
+// Function to generate random number
+function randomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+console.log("Random Number between 1 and 5: ")
+
+// Function call
+console.log( randomNumber(1000, 9999) );
+
+
+
+//worst case
+// random no = 0.0000001231423
+// length =4
+// what ever the random number may be at last + min will mak eit in range if(1000,9999) than 1000.68689
+
+
+//if random no is max 0.999999
+// max -min will again make it in range
+
+
+----------------------------------------------------
+
+
+// this will fail if input is 0.00000003402342
+
+function generateRandomNumber(length) {
+  const randomNum = Math.floor(Math.random() * Math.pow(10, length)) + Math.pow(10,length);
+  return randomNum.toString().padEnd(length, '0');
+}
+
+for(let i = 0; i < 10; i++){
+  console.log(generateRandomNumber(i))
+}
+
