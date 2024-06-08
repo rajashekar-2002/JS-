@@ -1,0 +1,22 @@
+let a=10;
+let b=13;
+
+//using temp variable
+let temp=a
+a=b
+b=temp
+console.log(a)
+console.log(b)
+
+// using XOR
+a=a^b
+b=a^b
+a=a^b
+console.log(a)
+console.log(b)
+
+//using destructuring
+[a,b]=[b,a];
+console.log(a)
+console.log(b)
+
