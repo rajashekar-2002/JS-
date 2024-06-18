@@ -1,0 +1,7 @@
+return random value in compare method to sort random
+
+let points = [40, 100, 1, 5, 25, 10];
+points.sort(function() {
+  return 0.5 - Math.random();
+});
+console.log(points); // Outputs: [10, 25, 1, 5, 40, 100]
